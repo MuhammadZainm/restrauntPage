@@ -1,21 +1,21 @@
 import "./styles.css"
 import {loadhome} from "./home.js"
 import {loadaboutus} from "./aboutus.js"
-import {loaddeals} from "./deals.js"
+import {loadlocations} from "./locations.js"
 import {loadmenu} from "./menu.js"
 
 
 const buttons=document.querySelectorAll("#btns button")
 const btnhome=document.querySelector("#homebtn")
 const btnmenu=document.querySelector("#btnMenu")
-const btndeals=document.querySelector("#btnDeals")
+// const btnlocation=document.querySelector("#btnLocations")
 const btnaboutus=document.querySelector("#btnAbout")
 document.addEventListener("DOMContentLoaded",()=>{
 const loaders={
     homebtn:loadhome,
     btnAbout:loadaboutus,
     btnMenu:loadmenu,
-    btnDeals:loaddeals,
+    // btnLocations:loadlocations,
 }
 btnhome.classList.add("selected")
     loadhome()
