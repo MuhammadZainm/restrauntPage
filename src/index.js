@@ -7,15 +7,15 @@ import {loadmenu} from "./menu.js"
 
 const buttons=document.querySelectorAll("#btns button")
 const btnhome=document.querySelector("#homebtn")
-const btnmenu=document.querySelector("#Menu")
-const btndeals=document.querySelector("#Deals")
-const btnaboutus=document.querySelector("#About")
+const btnmenu=document.querySelector("#btnMenu")
+const btndeals=document.querySelector("#btnDeals")
+const btnaboutus=document.querySelector("#btnAbout")
 document.addEventListener("DOMContentLoaded",()=>{
 const loaders={
     homebtn:loadhome,
-    About:loadaboutus,
-    Menu:loadmenu,
-    Deals:loaddeals,
+    btnAbout:loadaboutus,
+    btnMenu:loadmenu,
+    btnDeals:loaddeals,
 }
 btnhome.classList.add("selected")
     loadhome()
@@ -24,7 +24,7 @@ button.addEventListener("click",()=>{
     if(button.classList.contains("selected")) { console.log("na babu")
         return;}
 
-    document.querySelector("#btns .selected").classList.remove("selected")
+    document.querySelector("#btns .selected")?.classList.remove("selected")
 
     button.classList.add("selected")
 
